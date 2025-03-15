@@ -13,8 +13,8 @@ class OrderTest extends TestCase
 
         // Define behavior of mock method
         $mockPaymentService->method('processPayment')
-            ->with(200) // Expecting $100 as input
-            ->willReturn('Processed payment of $200');
+            ->with(100) // Expecting $100 as input
+            ->willReturn('Processed payment of $100');
 
         // Inject mock into Order
         $order = new Order($mockPaymentService);
